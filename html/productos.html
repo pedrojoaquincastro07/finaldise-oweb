@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Librería Escolar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center p-3">
+        <div class="container">
+            <h1>Librería Escolar</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contactos.html">Contáctanos</a></li>
+                            <li class="nav-item position-relative">
+                                <a class="nav-link text-white" href="carrito.html">
+                                    Carrito
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-5 text-primary fw-bold display-4">Catálogo de Productos</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+
+            <!-- 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/lapiz2b.jpg" class="card-img-top" alt="Lápices Stabilo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Lápices Stabilo 2B ×12</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 16.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Lápices Stabilo 2B ×12', 16.90, '../img/lapiz2b.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/plumones.jpg" class="card-img-top" alt="Plumones">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Plumones Artesco ×12</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 14.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Plumones Artesco ×12', 14.90, '../img/plumones.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/colores.jpg" class="card-img-top" alt="Colores">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Colores Faber-Castell Jumbo</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 26.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Colores Faber-Castell Jumbo', 26.90, '../img/colores.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/tijera.jpg" class="card-img-top" alt="Tijera">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Tijera Vinifan Punta Roma</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 6.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Tijera Vinifan Punta Roma', 6.90, '../img/tijera.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/cuaderno.webp" class="card-img-top" alt="Cuaderno" style="object-fit: cover; height: 200px;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Cuaderno Norma 100 hojas</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 8.50</p>
+                        <button class="btn btn-success mt-auto"16.90 onclick="addAndGo('Cuaderno Norma 100 hojas', 8.50, '../img/cuaderno.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/regla.jpeg" class="card-img-top" alt="Regla">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Regla 30 cm Faber</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 4.50</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Regla 30 cm Faber', 4.50, '../img/regla.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/borrador.jpeg" class="card-img-top" alt="Borrador">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Borrador Faber-Castell</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 2.50</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Borrador Faber-Castell', 2.50, '../img/borrador.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/pegamentouhu.webp" class="card-img-top" alt="Pegamento">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Pegamento en Barra UHU 21g</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 7.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Pegamento UHU 21g', 7.90, '../img/pegamento.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/mochilatotto.jpeg" class="card-img-top" alt="Mochila">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Mochila Escolar Totto</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 89.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Mochila Totto', 89.90, '../img/mochila.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/pilotg2.webp" class="card-img-top" alt="Lapicero">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Lapicero Pilot G2 ×3</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 19.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Lapicero Pilot G2 ×3', 19.90, '../img/lapicero.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/folder.jpeg" class="card-img-top" alt="Folder">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Folder A4 con gancho</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 12.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Folder A4 con gancho', 12.90, '../img/folder.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="../img/cinta.jpeg" class="card-img-top" alt="Cinta adhesiva">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Cinta Adhesiva 18mm</h5>
+                        <p class="text-danger fs-4 fw-bold">S/ 3.90</p>
+                        <button class="btn btn-success mt-auto" onclick="addAndGo('Cinta Adhesiva 18mm', 3.90, '../img/cinta.jpg', this)">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white text-center p-3 mt-4">
+        <div class="container">
+            <p>© 2025 Librería Escolar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function prepararControlesCantidad() {
+            document.querySelectorAll("button[onclick^=\"addAndGo\"]").forEach((btn) => {
+                const cardBody = btn.closest(".card-body");
+                if (!cardBody || cardBody.querySelector(".producto-cantidad")) return;
+
+                const contenedor = document.createElement("div");
+                contenedor.className = "mt-auto w-100";
+
+                const grupo = document.createElement("div");
+                grupo.className = "input-group mb-3";
+
+                const etiqueta = document.createElement("span");
+                etiqueta.className = "input-group-text";
+                etiqueta.textContent = "Cant.";
+
+                const input = document.createElement("input");
+                input.type = "number";
+                input.min = "1";
+                input.value = "1";
+                input.className = "form-control producto-cantidad";
+                input.setAttribute("aria-label", "Cantidad");
+
+                grupo.append(etiqueta, input);
+                btn.classList.remove("mt-auto");
+                btn.classList.add("w-100");
+
+                cardBody.insertBefore(contenedor, btn);
+                contenedor.appendChild(grupo);
+                contenedor.appendChild(btn);
+            });
+        }
+
+        function addAndGo(nombre, precio, imagen, boton) {
+            const origen = boton || (typeof event !== "undefined" ? event.currentTarget || event.target : null);
+            const input = origen?.closest(".card-body")?.querySelector(".producto-cantidad");
+            let cantidad = parseInt(input?.value, 10);
+            if (isNaN(cantidad) || cantidad < 1) {
+                cantidad = 1;
+                if (input) input.value = "1";
+            }
+
+            let carrito = JSON.parse(localStorage.getItem("carritoLibreria") || "[]");
+            let existe = carrito.find(item => item.nombre === nombre);
+            if (existe) {
+                existe.cantidad += cantidad;
+            } else {
+                carrito.push({ nombre, precio, imagen, cantidad });
+            }
+            localStorage.setItem("carritoLibreria", JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+
+        // Preparar controles y actualizar contador del menú
+        window.addEventListener("DOMContentLoaded", () => {
+            prepararControlesCantidad();
+
+            let carrito = JSON.parse(localStorage.getItem("carritoLibreria") || "[]");
+            let total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            document.querySelectorAll(".cart-count").forEach(el => el.textContent = total);
+        });
+    </script>
+</body>
+</html>

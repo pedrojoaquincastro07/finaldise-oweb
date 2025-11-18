@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Librería Escolar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -20,10 +20,19 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-link active" href="nosotros.html">Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
                             <li class="nav-item"><a class="nav-link" href="contactos.html">Contáctanos</a></li>
+                            <li class="nav-item position-relative">
+                                <a class="nav-link text-white" href="carrito.html">
+                                    🛒 Carrito
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                                        0
+                                        <span class="visually-hidden">productos en carrito</span>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -35,9 +44,8 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>Nuestra Misión</h2>
-                <p>Facilitar el acceso a útiles escolares de alta calidad a precios justos, apoyando a estudiantes, padres y educadores en el importante viaje del aprendizaje. Nos esforzamos por ser el mejor aliado para un exitoso año escolar.</p>
-            </div>
-            <div class="col-md-6">
+                <p>Facilitar el acceso a útiles escolares de alta calidad a precios justos, apoyando a estudiantes, padres y educadores en el importante viaje del aprendizaje. Nos esforzamos por ser el aliado confiable de las familias peruanas en cada etapa escolar.</p>
+                
                 <h2>Nuestra Visión</h2>
                 <p>Ser la cadena de librerías escolares líder a nivel nacional, reconocida por nuestra amplia variedad de productos, nuestro compromiso con la comunidad educativa y por inspirar la creatividad y el conocimiento en cada niño.</p>
             </div>
@@ -46,25 +54,25 @@
         <div class="row text-center">
             <h2>Nuestros Valores</h2>
             <div class="col-md-4">
-                <div class="card mb-4 h-100">
+                <div class="card mb-4 h-100 border-0 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Calidad</h5>
+                        <h5 class="card-title text-primary fw-bold">Calidad</h5>
                         <p class="card-text">Ofrecemos productos duraderos y seguros que cumplen con las necesidades de los estudiantes.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4 h-100">
+                <div class="card mb-4 h-100 border-0 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Servicio</h5>
+                        <h5 class="card-title text-success fw-bold">Servicio</h5>
                         <p class="card-text">Brindamos una atención amable y personalizada para ayudar a nuestros clientes a encontrar exactamente lo que necesitan.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4 h-100">
+                <div class="card mb-4 h-100 border-0 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Comunidad</h5>
+                        <h5 class="card-title text-warning fw-bold">Comunidad</h5>
                         <p class="card-text">Apoyamos activamente a las escuelas y organizaciones locales para fomentar la educación.</p>
                     </div>
                 </div>
@@ -74,11 +82,22 @@
 
     <footer class="bg-primary text-white text-center p-3 mt-4">
         <div class="container">
-            <p>&copy; 2025 Librería Escolar. Todos los derechos reservados.</p>
+            <p>© 2025 Librería Escolar. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Si ya no usas main.js, borra la línea de abajo. Si lo usas, cambia a ../js/main.js -->
+    <!-- <script src="../js/main.js"></script> -->
+
+    <!-- Contador del carrito (funciona en todas las páginas) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let carrito = JSON.parse(localStorage.getItem("carritoLibreria") || "[]");
+            let total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            document.querySelectorAll(".cart-count").forEach(el => el.textContent = total);
+        });
+    </script>
 </body>
+</html>
 </html>

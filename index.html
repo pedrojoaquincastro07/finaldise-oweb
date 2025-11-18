@@ -15,15 +15,21 @@
             <h1>Librería Escolar</h1>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contactos.html">Contáctanos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/productos.html">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/contactos.html">Contáctanos</a></li>
+                            <li class="nav-item position-relative">
+                                <a class="nav-link text-white" href="html/carrito.html">
+                                    Carrito
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -31,60 +37,100 @@
         </div>
     </header>
 
-    <main class="container mt-4">
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">¡Todo lo que necesitas para el regreso a clases!</h1>
-                <p class="col-md-8 fs-4">Encuentra la más amplia variedad de útiles escolares, mochilas y más. Calidad y buenos precios en un solo lugar.</p>
+    <main>
+        <!-- HERO -->
+        <section class="hero text-white text-center py-5 position-relative">
+            <div class="container position-relative" style="z-index: 2;">
+                <h1 class="display-2 fw-bold mb-4">Librería Escolar</h1>
+                <p class="lead fs-2 mb-4">¡Todo para el regreso a clases 2025!</p>
+                <a href="html/productos.html" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg">VER TODOS LOS PRODUCTOS</a>
             </div>
-        </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        </section>
 
-        <div id="productCarousel" class="carousel carousel-fade slide carousel-dark" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <!-- CARRUSEL DE OFERTAS (solo visual, sin botones de compra) -->
+        <section class="container my-5">
+            <h2 class="text-center mb-5 text-primary fw-bold display-5">Ofertas Especiales</h2>
+
+            <div id="productCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" style="max-width: 1100px; margin: 0 auto;" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3"></button>
+                </div>
+
+                <div class="carousel-inner rounded-4">
+                    <!-- 1. Lápices Stabilo -->
+                    <div class="carousel-item active">
+                        <div class="d-flex align-items-center justify-content-center text-white position-relative" style="height: 580px; background: linear-gradient(135deg, #c0392b, #e74c3c);">
+                            <img src="img/lapiz2b.jpg" class="position-absolute w-100 h-100 opacity-25" style="object-fit: cover;" alt="Lápices Stabilo">
+                            <div class="text-center px-4">
+                                <h2 class="display-2 fw-bold mb-3">¡OFERTA!</h2>
+                                <h3 class="display-4 mb-4">Caja Lápices Stabilo ×12</h3>
+                                <div class="d-flex justify-content-center align-items-end gap-4 mb-5">
+                                    <span class="text-decoration-line-through fs-1 opacity-75">S/ 28.00</span>
+                                    <span class="display-1 fw-bold">S/ 16.90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Plumones Artesco -->
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center justify-content-center text-white position-relative" style="height: 580px; background: linear-gradient(135deg, #2980b9, #3498db);">
+                            <img src="img/plumones.jpg" class="position-absolute w-100 h-100 opacity-25" style="object-fit: cover;" alt="Plumones">
+                            <div class="text-center px-4">
+                                <h2 class="display-2 fw-bold mb-3">¡OFERTA!</h2>
+                                <h3 class="display-4 mb-4">Plumones Artesco Max 45 ×12</h3>
+                                <div class="d-flex justify-content-center align-items-end gap-4 mb-5">
+                                    <span class="text-decoration-line-through fs-1 opacity-75">S/ 25.00</span>
+                                    <span class="display-1 fw-bold">S/ 14.90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Colores Faber-Castell -->
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center justify-content-center text-white position-relative" style="height: 580px; background: linear-gradient(135deg, #27ae60, #2ecc71);">
+                            <img src="img/colores.jpg" class="position-absolute w-100 h-100 opacity-25" style="object-fit: cover;" alt="Colores">
+                            <div class="text-center px-4">
+                                <h2 class="display-2 fw-bold mb-3">¡OFERTA!</h2>
+                                <h3 class="display-4 mb-4">Colores Jumbo Faber-Castell +2 gratis</h3>
+                                <div class="d-flex justify-content-center align-items-end gap-4 mb-5">
+                                    <span class="text-decoration-line-through fs-1 opacity-75">S/ 38.00</span>
+                                    <span class="display-1 fw-bold">S/ 26.90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Tijera Vinifan -->
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center justify-content-center text-white position-relative" style="height: 580px; background: linear-gradient(135deg, #e67e22, #f39c12);">
+                            <img src="img/tijera.jpg" class="position-absolute w-100 h-100 opacity-25" style="object-fit: cover;" alt="Tijera">
+                            <div class="text-center px-4">
+                                <h2 class="display-2 fw-bold mb-3">¡OFERTA!</h2>
+                                <h3 class="display-4 mb-4">Tijera Vinifan Punta Roma</h3>
+                                <div class="d-flex justify-content-center align-items-end gap-4 mb-5">
+                                    <span class="text-decoration-line-through fs-1 opacity-75">S/ 12.90</span>
+                                    <span class="display-1 fw-bold">S/ 6.90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flechas -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" style="width: 60px; height: 60px;"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" style="width: 60px; height: 60px;"></span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://placehold.co/800x400/F9E79F/333333?text=Cuadernos" class="d-block w-100" alt="Cuadernos">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Cuadernos de todos los tamaños</h5>
-                        <p>Rayados, cuadriculados, de dibujo y más.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://placehold.co/800x400/A9DFBF/333333?text=Lápices+de+Colores" class="d-block w-100" alt="Lápices de Colores">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Cajas de Lápices de Colores</h5>
-                        <p>Para dar vida y color a tus tareas.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://placehold.co/800x400/AED6F1/333333?text=Mochilas" class="d-block w-100" alt="Mochilas">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Mochilas Resistentes y Modernas</h5>
-                        <p>Elige la que mejor se adapte a tu estilo.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://placehold.co/800x400/F5B7B1/333333?text=Set+de+Geometría" class="d-block w-100" alt="Set de Geometría">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Sets de Geometría</h5>
-                        <p>Todo lo necesario para tus clases de matemáticas.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        </section>
     </main>
 
     <footer class="bg-primary text-white text-center p-3 mt-4">
@@ -93,7 +139,7 @@
         </div>
     </footer>
 
+    <!-- Solo Bootstrap (sin main.js ni modal) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
