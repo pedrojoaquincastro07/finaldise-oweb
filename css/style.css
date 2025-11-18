@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+#mensaje {
+    resize: none;
+}
+
+/* Carousel Customizations */
+#productCarousel {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.carousel-item img {
+    transition: transform 2s ease-in-out;
+}
+
+.carousel-item.active img {
+    transform: scale(1.1);
+}
+
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #ffffff;
+}
